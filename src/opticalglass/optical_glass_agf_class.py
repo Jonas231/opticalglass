@@ -122,6 +122,7 @@ class Zemax_infrared_Catalog(glass.GlassCatalogPandas, metaclass=Singleton):
 
     def get_transmission_wvl(header_str):
         """Returns the wavelength value from the transmission data header string."""
+        #print(header_str)
         return float(header_str[len('TAUI10/'):])
 
     def __init__(self, fname='infrared_2022.xlsx'):
